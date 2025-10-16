@@ -16,7 +16,7 @@ const DataTableComponent: React.FC = () => {
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage] = useState(10);
   const [showSearchBox, setShowSearchBox] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [filteredArtworks, setFilteredArtworks] = useState<Artwork[]>([]);
@@ -131,7 +131,7 @@ const DataTableComponent: React.FC = () => {
   );
 
   return (
-    <div className="max-h-full bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+    <div className=" bg-white border border-gray-200 rounded-xl shadow-sm p-6">
       <Toast ref={toast} />
 
       <DataTable
